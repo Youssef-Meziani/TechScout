@@ -1,0 +1,25 @@
+name: techscout
+recipe: drupal10
+config:
+  webroot: web
+
+services:
+  appserver:
+    type: php:8.1
+    xdebug: true
+
+  database:
+    type: mysql
+    creds:
+      user: techrootscout
+      password: kfTkUcJFstoVJ
+      database: techscout
+
+tooling:
+  drush:
+    service: appserver
+    cmd: "vendor/bin/drush"
+  phpunit:
+    service: appserver
+    description: Run PHPUnit tests.
+    cmd: "vendor/bin/phpunit"
