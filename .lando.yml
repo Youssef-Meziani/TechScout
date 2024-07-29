@@ -18,7 +18,7 @@ services:
   phpmyadmin:
     type: phpmyadmin
     hosts:
-      - database
+      - database
 
 tooling:
   drush:

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "188335b837fdb87c0aa165e87df45ed8",
+    "content-hash": "dd4956f366261ddb8dca4b08f19593ec",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1883,6 +1883,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/entity",
                 "issues": "https://www.drupal.org/project/issues/entity"
+            }
+        },
+        {
+            "name": "drupal/entity_comparison",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_comparison.git",
+                "reference": "4.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_comparison-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "5555c10414a214cc5dfa7f1c3493ddc8e85d9445"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.1",
+                    "datestamp": "1672227807",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "david.czinege",
+                    "homepage": "https://www.drupal.org/user/2795337"
+                },
+                {
+                    "name": "lobodacyril",
+                    "homepage": "https://www.drupal.org/user/769176"
+                },
+                {
+                    "name": "tarikflz",
+                    "homepage": "https://www.drupal.org/user/3593303"
+                }
+            ],
+            "description": "Allows user to compare entities.",
+            "homepage": "https://www.drupal.org/project/entity_comparison",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_comparison"
             }
         },
         {
