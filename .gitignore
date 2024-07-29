@@ -202,3 +202,68 @@ fabric.properties
 # Ignore all local history of files
 .history
 .ionide
+
+
+
+
+# Ignore compiled stylesheets
+/web/sites/*/files/css/
+/web/sites/*/files/css-rtl/
+
+/web/sites/*/files/js/
+/web/sites/*/files/php/
+/web/sites/*/files/.ht.sqlite
+
+# Ignore user-specific files and folders
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/settings.local.php
+
+# Ignore temporary files and folders
+/web/tmp/
+/web/temp/
+
+# Ignore logs
+/web/logs/
+/web/*.log
+
+# Ignore IDE and editor specific files
+/web/.idea/
+/web/.vscode/
+/web/*.swp
+
+# Ignore common backup files
+/web/*.orig
+/web/*.bak
+/web/*.backup
+
+# Ignore environment files
+/web/.env
+
+# Ignore Composer lock file and vendor directory in web/core
+/web/core/composer.lock
+/web/core/vendor/
+
+# Ignore compiled stylesheets and minified scripts in web/core
+/web/core/sites/*/files/css/
+/web/core/sites/*/files/js/
+/web/core/sites/*/files/php/
+/web/core/sites/*/files/.ht.sqlite
+
+# Ignore settings.local.php file in web/core
+/web/core/sites/*/settings.local.php
+
+# Ignore temporary files and directories in web/core
+/web/core/tmp/
+/web/core/temp/
+/web/core/*.orig
+/web/core/*.bak
+/web/core/*.backup
+/web/core/*.swp
+
+# Ignore logs in web/core
+/web/core/logs/
+/web/core/*.log
+
+# Ignore private files in web/core
+/web/core/sites/*/private/

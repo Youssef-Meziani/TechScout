@@ -15,6 +15,11 @@ services:
       password: kfTkUcJFstoVJ
       database: techscout
 
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
+
 tooling:
   drush:
     service: appserver
