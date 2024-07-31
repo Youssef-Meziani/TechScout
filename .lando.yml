@@ -5,9 +5,8 @@ config:
 
 services:
   appserver:
-    type: php:8.1
+    type: php:8.2
     xdebug: true
-    ssl: false
     port: 80
 
   database:
