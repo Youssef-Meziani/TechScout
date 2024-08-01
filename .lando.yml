@@ -5,8 +5,9 @@ config:
 
 services:
   appserver:
-    type: php:8.1
+    type: php:8.2
     xdebug: true
+    port: 80
 
   database:
     type: mysql
@@ -19,6 +20,13 @@ services:
     type: phpmyadmin
     hosts:
       - database
+
+  varnish:
+    type: varnish:6.0
+    backends:
+      - appserver
+    config:
+      vcl: config/varnish/default.vcl
 
 tooling:
   drush:
