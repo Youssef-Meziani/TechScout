@@ -7,7 +7,6 @@ services:
   appserver:
     type: php:8.2
     xdebug: true
-    port: 80
 
   database:
     type: mysql
@@ -28,11 +27,22 @@ services:
     config:
       vcl: config/varnish/default.vcl
 
+  solr:
+    type: solr:9
+    core: drupal
+    ports:
+      - 8983:8983
+    config:
+      dir: config/solr
+
+
 tooling:
   drush:
     service: appserver
     cmd: "vendor/bin/drush"
   phpunit:
     service: appserver
-    description: Run PHPUnit tests.
     cmd: "vendor/bin/phpunit"
+  solr:
+    service: solr
+    cmd: solr

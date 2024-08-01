@@ -267,3 +267,12 @@ fabric.properties
 
 # Ignore private files in web/core
 /web/core/sites/*/private/
+
+
+
+
+# Ignore the contrib folder because it's generated with composer install
+/web/modules/contrib/
+
+# Ignore Windows Zone.Identifier metadata files
+*Zone.Identifier
