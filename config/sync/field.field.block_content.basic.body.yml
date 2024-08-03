@@ -1,5 +1,5 @@
 uuid: 60b646f3-3776-4fcf-9de0-fde47209c066
-langcode: en
+langcode: fr
 status: true
 dependencies:
   config:
@@ -13,10 +13,10 @@ id: block_content.basic.body
 field_name: body
 entity_type: block_content
 bundle: basic
-label: Body
+label: Corps
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

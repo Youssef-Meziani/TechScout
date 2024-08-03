@@ -1,5 +1,5 @@
 uuid: 71cb8208-bd34-47a2-ae2b-2815c536efda
-langcode: en
+langcode: fr
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ dependencies:
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
-label: 'Authenticated user'
+label: 'Utilisateur authentifié'
 weight: 1
 is_admin: false
 permissions:

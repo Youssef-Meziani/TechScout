@@ -1,5 +1,5 @@
 uuid: 1c465f1e-b790-4ab9-97f6-1616c96b045a
-langcode: en
+langcode: fr
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ dependencies:
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
-label: 'Anonymous user'
+label: 'Utilisateur anonyme'
 weight: 0
 is_admin: false
 permissions:
