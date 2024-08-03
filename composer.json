@@ -23,6 +23,7 @@
         "drupal/entity_comparison": "^4.0",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/purge": "^3.6",
+        "drupal/search_api_solr": "^4.3",
         "drupal/varnish_purge": "^2.2",
         "drupal/varnish_purger": "^2.2",
         "drush/drush": "^12.5"

@@ -30,6 +30,7 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  language: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -43,6 +44,8 @@ module:
   purge_tokens: 0
   purge_ui: 0
   search: 0
+  search_api: 0
+  search_api_solr: 0
   shortcut: 0
   system: 0
   taxonomy: 0
