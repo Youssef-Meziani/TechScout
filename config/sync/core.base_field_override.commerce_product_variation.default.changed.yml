@@ -1,0 +1,18 @@
+uuid: 8ec693ed-979e-4956-aaf9-5d7f97b4c9a0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+id: commerce_product_variation.default.changed
+field_name: changed
+entity_type: commerce_product_variation
+bundle: default
+label: Modifié
+description: 'La date à laquelle la variation a été éditée la dernière fois.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,22 @@
+uuid: 48cada4b-6dbf-42ec-8bd3-f4d9802fff9f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.default
+id: commerce_product_variation.default.status
+field_name: status
+entity_type: commerce_product_variation
+bundle: default
+label: Publié
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

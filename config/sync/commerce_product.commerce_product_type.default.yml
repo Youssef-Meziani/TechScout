@@ -1,11 +1,11 @@
 uuid: f7ef58ad-b25d-48bf-b753-598366b2fed3
-langcode: en
+langcode: fr
 status: true
 dependencies: {  }
 _core:
   default_config_hash: hwJoqnxqBS0fPM3s6FccZ2bWaq9LneRYLzFk-wlJWjs
 id: default
-label: Default
+label: 'Par défaut'
 traits: {  }
 locked: false
 description: ''

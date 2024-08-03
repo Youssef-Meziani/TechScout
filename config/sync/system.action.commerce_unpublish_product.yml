@@ -1,5 +1,5 @@
 uuid: 47aece80-b2f6-46aa-81b7-5b1cf25f8ea3
-langcode: en
+langcode: fr
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: 6gfQWDjHFkJsE2C2ayhUL7x1jBGPgOhr3SGF15Kxy-w
 id: commerce_unpublish_product
-label: 'Unpublish product'
+label: 'Dépublier le produit'
 type: commerce_product
 plugin: commerce_unpublish_product
 configuration: {  }
