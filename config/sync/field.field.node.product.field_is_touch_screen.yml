@@ -1,0 +1,19 @@
+uuid: 29c0aa23-60bf-45ec-9f39-89dd7fda9446
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_touch_screen
+    - node.type.product
+id: node.product.field_is_touch_screen
+field_name: field_is_touch_screen
+entity_type: node
+bundle: product
+label: 'Écran tactile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

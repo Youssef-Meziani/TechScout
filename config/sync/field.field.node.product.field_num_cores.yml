@@ -1,0 +1,23 @@
+uuid: 0e40f342-f5ec-402e-bfc8-ec0f404fd0fd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_num_cores
+    - node.type.product
+id: node.product.field_num_cores
+field_name: field_num_cores
+entity_type: node
+bundle: product
+label: 'Nombre des coeurs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
