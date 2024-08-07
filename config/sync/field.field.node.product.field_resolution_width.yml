@@ -1,0 +1,23 @@
+uuid: a5a25bad-0062-4728-83b3-9adfd380a0d6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resolution_width
+    - node.type.product
+id: node.product.field_resolution_width
+field_name: field_resolution_width
+entity_type: node
+bundle: product
+label: 'Résolution (width)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

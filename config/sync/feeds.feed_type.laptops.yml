@@ -1,0 +1,273 @@
+uuid: 17dd9c03-47f0-4afd-8121-d49f36254527
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.base_field_override.node.product.title
+    - field.field.node.product.field_display_size
+    - field.field.node.product.field_gpu_brand
+    - field.field.node.product.field_is_touch_screen
+    - field.field.node.product.field_model
+    - field.field.node.product.field_num_cores
+    - field.field.node.product.field_num_threads
+    - field.field.node.product.field_os
+    - field.field.node.product.field_price
+    - field.field.node.product.field_primary_storage_capacity
+    - field.field.node.product.field_primary_storage_type
+    - field.field.node.product.field_processor_brand
+    - field.field.node.product.field_processor_tier
+    - field.field.node.product.field_ram_memory
+    - field.field.node.product.field_rating
+    - field.field.node.product.field_resolution_height
+    - field.field.node.product.field_resolution_width
+    - field.field.node.product.field_year_of_warranty
+    - node.type.product
+  module:
+    - node
+label: Laptops
+id: laptops
+description: 'Laptops description'
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: product
+  langcode: fr
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  brand:
+    value: brand
+    label: Marque
+    machine_name: brand
+    type: csv
+  model:
+    value: Model
+    label: Model
+    machine_name: model
+    type: csv
+  price:
+    value: Price
+    label: Price
+    machine_name: price
+    type: csv
+  rating:
+    value: Rating
+    label: Rating
+    machine_name: rating
+    type: csv
+  processor_brand:
+    value: processor_brand
+    label: 'Marque du processeur'
+    machine_name: processor_brand
+    type: csv
+  processor_tier:
+    value: processor_tier
+    label: 'Processor tier'
+    machine_name: processor_tier
+    type: csv
+  num_cores:
+    value: num_cores
+    label: 'Nombre de cœurs'
+    machine_name: num_cores
+    type: csv
+  num_threads:
+    value: num_threads
+    label: 'Numéro des threads'
+    machine_name: num_threads
+    type: csv
+  ram_memory:
+    value: ram_memory
+    label: 'Mémoire RAM'
+    machine_name: ram_memory
+    type: csv
+  primary_storage_type:
+    value: primary_storage_type
+    label: ' Type de stockage principal'
+    machine_name: primary_storage_type
+    type: csv
+  primary_storage_capacity:
+    value: primary_storage_capacity
+    label: 'Capacité de stockage principale'
+    machine_name: primary_storage_capacity
+    type: csv
+  gpu_brand:
+    value: gpu_brand
+    label: 'Marque de GPU'
+    machine_name: gpu_brand
+    type: csv
+  is_touch_screen:
+    value: is_touch_screen
+    label: 'Écran tactile'
+    machine_name: is_touch_screen
+    type: csv
+  display_size:
+    value: display_size
+    label: "Taille d'affichage"
+    machine_name: display_size
+    type: csv
+  resolution_width:
+    value: resolution_width
+    label: 'Résolution (width)'
+    machine_name: resolution_width
+    type: csv
+  resolution_height:
+    value: resolution_height
+    label: 'Résolution (height)'
+    machine_name: resolution_height
+    type: csv
+  os:
+    value: OS
+    label: "Système d'exploitation"
+    machine_name: os
+    type: csv
+  year_of_warranty:
+    value: year_of_warranty
+    label: 'Année de garantie'
+    machine_name: year_of_warranty
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: brand
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_model
+    map:
+      value: model
+    settings:
+      language: null
+  -
+    target: field_price
+    map:
+      value: price
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_rating
+    map:
+      value: rating
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_processor_brand
+    map:
+      value: processor_brand
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_processor_tier
+    map:
+      value: processor_tier
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_num_cores
+    map:
+      value: num_cores
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_num_threads
+    map:
+      value: num_threads
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_ram_memory
+    map:
+      value: ram_memory
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_primary_storage_type
+    map:
+      value: primary_storage_type
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_primary_storage_capacity
+    map:
+      value: primary_storage_capacity
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_gpu_brand
+    map:
+      value: gpu_brand
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_is_touch_screen
+    map:
+      value: is_touch_screen
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_display_size
+    map:
+      value: display_size
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_resolution_width
+    map:
+      value: resolution_width
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_resolution_height
+    map:
+      value: resolution_height
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_os
+    map:
+      value: os
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_year_of_warranty
+    map:
+      value: year_of_warranty
+    settings:
+      language: null
+    unique: {  }

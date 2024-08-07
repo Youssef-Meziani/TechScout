@@ -1,0 +1,21 @@
+uuid: 4f4b5bbf-04d7-4fe8-a691-eb2346c427aa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_processor_brand
+field_name: field_processor_brand
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

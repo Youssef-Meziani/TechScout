@@ -1,0 +1,23 @@
+uuid: 8dfe624a-967b-443e-bea9-b9be8d6fc5ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_num_threads
+    - node.type.product
+id: node.product.field_num_threads
+field_name: field_num_threads
+entity_type: node
+bundle: product
+label: 'Nombre des threads'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

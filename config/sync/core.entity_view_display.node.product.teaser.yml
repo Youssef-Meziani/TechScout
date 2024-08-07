@@ -1,0 +1,68 @@
+uuid: f6fa5556-da5f-4165-b5c1-e8f8ca5f0eef
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.product.feeds_item
+    - field.field.node.product.field_brand
+    - field.field.node.product.field_display_size
+    - field.field.node.product.field_gpu_brand
+    - field.field.node.product.field_gpu_type
+    - field.field.node.product.field_index
+    - field.field.node.product.field_is_touch_screen
+    - field.field.node.product.field_model
+    - field.field.node.product.field_num_cores
+    - field.field.node.product.field_num_threads
+    - field.field.node.product.field_os
+    - field.field.node.product.field_price
+    - field.field.node.product.field_primary_storage_capacity
+    - field.field.node.product.field_primary_storage_type
+    - field.field.node.product.field_processor_brand
+    - field.field.node.product.field_processor_tier
+    - field.field.node.product.field_ram_memory
+    - field.field.node.product.field_rating
+    - field.field.node.product.field_resolution_height
+    - field.field.node.product.field_resolution_width
+    - field.field.node.product.field_secondary_storage_capacity
+    - field.field.node.product.field_secondary_storage_type
+    - field.field.node.product.field_year_of_warranty
+    - node.type.product
+  module:
+    - user
+id: node.product.teaser
+targetEntityType: node
+bundle: product
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_brand: true
+  field_display_size: true
+  field_gpu_brand: true
+  field_gpu_type: true
+  field_index: true
+  field_is_touch_screen: true
+  field_model: true
+  field_num_cores: true
+  field_num_threads: true
+  field_os: true
+  field_price: true
+  field_primary_storage_capacity: true
+  field_primary_storage_type: true
+  field_processor_brand: true
+  field_processor_tier: true
+  field_ram_memory: true
+  field_rating: true
+  field_resolution_height: true
+  field_resolution_width: true
+  field_secondary_storage_capacity: true
+  field_secondary_storage_type: true
+  field_year_of_warranty: true
+  langcode: true
+  search_api_excerpt: true
