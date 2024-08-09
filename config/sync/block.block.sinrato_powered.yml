@@ -1,0 +1,22 @@
+uuid: 0fbd3af3-802e-4feb-ab53-cb215c67b6ab
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sinrato
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: sinrato_powered
+theme: sinrato
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

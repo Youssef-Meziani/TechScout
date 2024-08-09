@@ -1,0 +1,5 @@
+name: 'Sinrato Pages'
+type: module
+description: 'Provides custom pages with Twig templates.'
+core_version_requirement: ^10
+package: CustomModules
