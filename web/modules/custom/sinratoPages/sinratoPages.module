@@ -1,0 +1,15 @@
+<?php
+
+function sinratoPages_theme($existing, $type, $theme, $path){
+  return [
+    'home' => [
+      'variables' => ['data' => NULL]
+    ],
+    'compare' => [
+      'variables' => ['data' => NULL]
+    ],
+    'laptop' => [
+      'variables' => ['data' => NULL]
+    ],
+  ];
+}

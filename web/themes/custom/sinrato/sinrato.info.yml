@@ -1,0 +1,13 @@
+name: 'Sinrato'
+type: theme
+description: 'A custom theme based on the Sinrato template.'
+package: Custom
+base theme: false
+core_version_requirement: ^10
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'

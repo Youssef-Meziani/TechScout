@@ -115,7 +115,15 @@ cd TechScout
 
 1. **Importer la configuration Drupal :**
     ```bash
-    lando drush config:import
+    lando drush si --db-url=mysql://drupal9:techrootscout@kfTkUcJFstoVJ/techscout -y
+
+    lando drush cset system.site uuid fe926cbc-b8ff-43dc-80d0-467754178069
+
+    lando drush cset shortcut.set.default uuid fe926cbc-b8ff-43dc-80d0-467754178069
+
+    lando drush sql:query "DELETE FROM shortcut;"
+
+    lando drush config:import -y
     ```
 
 2. **Rebuild du cache Drupal :**

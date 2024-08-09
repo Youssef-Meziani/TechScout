@@ -913,3 +913,4 @@ $settings['trusted_host_patterns'] = [
   '^techscout\.lndo\.site$',
   '^techscout\.lndo\.site(:[0-9]+)?$',
 ];
+$config['system.logging']['error_level'] = 'verbose';
