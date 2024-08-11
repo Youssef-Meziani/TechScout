@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         compareItems.forEach(item => {
             comparisonTable.querySelector('tbody tr:nth-child(1)').innerHTML += `<td><a href="product-details.html"><strong>${item.name}</strong></a></td>`;
-            comparisonTable.querySelector('tbody tr:nth-child(2)').innerHTML += `<td><img src="${item.image}" alt="${item.name}" class="img-thumbnail"></td>`;
+            comparisonTable.querySelector('tbody tr:nth-child(2)').innerHTML += `<td><img src="${basePath + themeDirectory}/${item.image}" alt="${item.name}" class="img-thumbnail"></td>`;
             comparisonTable.querySelector('tbody tr:nth-child(3)').innerHTML += `<td><span>${item.price}</span></td>`;
             // Ajoutez d'autres colonnes si nécessaire
         });
