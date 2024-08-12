@@ -908,9 +908,16 @@ $settings['reverse_proxy'] = TRUE;
 $settings['reverse_proxy_addresses'] = array($_SERVER['REMOTE_ADDR']);
 $settings['varnish_control_terminal'] = 'varnish:6082';
 
+
+// Settings for DEV environment only
 $settings['trusted_host_patterns'] = [
   '^localhost(:[0-9]+)?$',
   '^techscout\.lndo\.site$',
   '^techscout\.lndo\.site(:[0-9]+)?$',
 ];
+$settings['cache']['bins']['render'] = 'cache.backend.memory';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.memory';
+$settings['cache']['bins']['page'] = 'cache.backend.memory';
+
+$config['system.performance']['cache']['page']['max_age'] = 0;
 $config['system.logging']['error_level'] = 'verbose';
