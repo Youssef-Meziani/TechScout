@@ -1,0 +1,22 @@
+uuid: df5a494a-f5f6-4924-9a9e-e831615cfbd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kart
+_core:
+  default_config_hash: It1dYBpENqvVxeYG-4EvxSWDS8WwhQ-Il0DxQYRahxs
+id: kart_content
+theme: kart
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

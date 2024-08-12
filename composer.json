@@ -24,6 +24,7 @@
         "drupal/entity_comparison": "^4.0",
         "drupal/feeds": "^3.0@beta",
         "drupal/inline_entity_form": "^3.0@RC",
+        "drupal/kart": "^1.0",
         "drupal/purge": "^3.6",
         "drupal/search_api_solr": "^4.3",
         "drupal/varnish_purge": "^2.2",
