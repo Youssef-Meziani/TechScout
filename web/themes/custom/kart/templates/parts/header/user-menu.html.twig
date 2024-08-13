@@ -1,0 +1,11 @@
+{% if logged_in %}
+  <ul class="menu">
+    <li><a href="{{ front_page }}user"><i class="bi bi-person"></i> Mon compte</a></li>
+    <li><a href="{{ front_page }}user/logout"><i class="bi bi-box-arrow-in-right"></i> Déconnexion</a></li>
+  </ul>
+{% else %}
+  <ul class="menu">
+    <li><a href="{{ front_page }}user/login"><i class="bi bi-box-arrow-in-right"></i> Se connecter</a></li>
+    <li><a href="{{ front_page }}user/register"><i class="bi bi-person"></i> S'inscrire</a></li>
+  </ul>
+{% endif %}

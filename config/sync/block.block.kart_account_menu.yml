@@ -13,7 +13,7 @@ _core:
 id: kart_account_menu
 theme: kart
 region: hidden_blocks
-weight: -13
+weight: -3
 provider: null
 plugin: 'system_menu_block:account'
 settings:

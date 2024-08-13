@@ -1,6 +1,16 @@
 _core:
   default_config_hash: 4bQlG9nX40H6RYr1oMGvC0OQ_EGyNS_075_dl8JcrmE
-container_width: 1260
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: themes/custom/kart/logo.png
+  use_default: false
+container_width: '1260'
 header_width: header_width_contained
 main_width: main_width_contained
 footer_width: footer_width_contained
@@ -21,3 +31,5 @@ copyright_text: 1
 scrolltotop_on: 1
 css_extra: 0
 css_code: ''
+vk_url: ''
+slider_style_options: slider_three

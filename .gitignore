@@ -273,6 +273,7 @@ fabric.properties
 
 # Ignore the contrib folder because it's generated with composer install
 /web/modules/contrib/
+/web/themes/contrib/
 
 # Ignore Windows Zone.Identifier metadata files
 *Zone.Identifier

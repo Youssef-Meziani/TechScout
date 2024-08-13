@@ -10,8 +10,8 @@ _core:
   default_config_hash: v3ZiUY0Uoig8LMdG6l1KNwFZpC-DRvf5ZjBdZ5HdhUQ
 id: kart_breadcrumbs
 theme: kart
-region: page_header
-weight: -12
+region: hidden_blocks
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:
