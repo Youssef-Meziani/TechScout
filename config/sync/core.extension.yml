@@ -51,7 +51,6 @@ module:
   search_api: 0
   search_api_solr: 0
   shortcut: 0
-  sinratoPages: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -64,9 +63,7 @@ module:
   views: 10
   standard: 1000
 theme:
-  olivero: 0
   claro: 0
-  sinrato: 0
   stable9: 0
   kart: 0
 profile: standard
