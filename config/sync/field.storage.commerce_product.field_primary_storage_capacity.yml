@@ -1,0 +1,20 @@
+uuid: e10d82b7-4ac7-4da3-b9c6-0a1d2f3b6cc7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_primary_storage_capacity
+field_name: field_primary_storage_capacity
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

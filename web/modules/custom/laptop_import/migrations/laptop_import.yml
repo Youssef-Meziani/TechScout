@@ -1,0 +1,99 @@
+id: laptop_import
+label: 'Import des laptops depuis CSV'
+migration_tags:
+  - Commerce
+source:
+  plugin: csv
+  path: 'public://laptops.csv'
+  header_row_count: 1
+  ids:
+    - index
+  column_names:
+    0:
+      index: 'Index'
+    1:
+      brand: 'Marque'
+    2:
+      Model: 'Modèle'
+    3:
+      Price: 'Prix'
+    4:
+      Rating: 'Note'
+    5:
+      processor_brand: 'Marque du processeur'
+    6:
+      processor_tier: 'Niveau du processeur'
+    7:
+      num_cores: 'Nombre de cœurs'
+    8:
+      num_threads: 'Nombre de threads'
+    9:
+      ram_memory: 'Mémoire RAM'
+    10:
+      primary_storage_type: 'Type de stockage primaire'
+    11:
+      primary_storage_capacity: 'Capacité de stockage primaire'
+    12:
+      secondary_storage_type: 'Type de stockage secondaire'
+    13:
+      secondary_storage_capacity: 'Capacité de stockage secondaire'
+    14:
+      gpu_brand: 'Marque GPU'
+    15:
+      gpu_type: 'Type de GPU'
+    16:
+      is_touch_screen: 'Écran tactile'
+    17:
+      display_size: 'Taille de l''écran'
+    18:
+      resolution_width: 'Largeur de résolution'
+    19:
+      resolution_height: 'Hauteur de résolution'
+    20:
+      OS: 'Système d''exploitation'
+    21:
+      year_of_warranty: 'Années de garantie'
+process:
+  type:
+    plugin: default_value
+    default_value: laptop
+  title:
+    plugin: get
+    source: Model
+  field_brand: brand
+  field_processor_brand: processor_brand
+  field_processor_tier: processor_tier
+  field_num_cores: num_cores
+  field_num_threads: num_threads
+  field_ram_memory: ram_memory
+  field_primary_storage_type: primary_storage_type
+  field_primary_storage_capacity: primary_storage_capacity
+  field_secondary_storage_type: secondary_storage_type
+  field_secondary_storage_capacity: secondary_storage_capacity
+  field_gpu_brand: gpu_brand
+  field_gpu_type: gpu_type
+  field_is_touch_screen:
+    plugin: static_map
+    source: is_touch_screen
+    map:
+      'False': 0
+      'True': 1
+  field_display_size: display_size
+  field_resolution:
+    plugin: concat
+    source:
+      - resolution_width
+      - resolution_height
+    delimiter: 'x'
+  field_os: OS
+  field_warranty: year_of_warranty
+  field_rating: Rating
+  variations/0/sku: index
+  variations/0/price/number: Price
+  variations/0/price/currency_code:
+    plugin: default_value
+    default_value: 'MAD'
+destination:
+  plugin: 'entity:commerce_product'
+  default_bundle: 'laptops'
+migration_dependencies: {}

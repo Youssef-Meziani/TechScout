@@ -1,0 +1,11 @@
+uuid: 221d79ed-b87b-4c22-bc5b-e81b2d72f987
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+id: commerce_product.laptop
+target_entity_type_id: commerce_product
+target_bundle: laptop
+default_langcode: site_default
+language_alterable: false

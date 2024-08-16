@@ -1,0 +1,23 @@
+uuid: c3883758-c154-49ee-aec5-7e1d600f14ee
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+    - field.storage.commerce_product.field_num_cores
+id: commerce_product.laptop.field_num_cores
+field_name: field_num_cores
+entity_type: commerce_product
+bundle: laptop
+label: num_cores
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

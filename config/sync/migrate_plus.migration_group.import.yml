@@ -1,0 +1,10 @@
+uuid: d5fe140c-52da-42c4-a27b-76dae5329d9e
+langcode: fr
+status: true
+dependencies: {  }
+id: import
+label: import
+description: ''
+source_type: null
+module: null
+shared_configuration: null
