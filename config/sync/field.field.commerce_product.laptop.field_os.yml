@@ -1,0 +1,19 @@
+uuid: dce9026e-7854-48fb-9377-f0f5f708547d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+    - field.storage.commerce_product.field_os
+id: commerce_product.laptop.field_os
+field_name: field_os
+entity_type: commerce_product
+bundle: laptop
+label: os
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

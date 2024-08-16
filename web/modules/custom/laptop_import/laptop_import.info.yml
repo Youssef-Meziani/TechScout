@@ -1,0 +1,11 @@
+name: Laptop Import
+type: module
+description: 'Module personnalise pour l importation de laptops.'
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_drupal
+  - drupal:migrate_plus
+  - drupal:migrate_tools
+  - commerce:commerce
+  - commerce:commerce_product

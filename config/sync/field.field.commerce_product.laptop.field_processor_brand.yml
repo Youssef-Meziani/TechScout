@@ -1,0 +1,19 @@
+uuid: b6244065-d81a-4c80-b637-9c240042a51f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+    - field.storage.commerce_product.field_processor_brand
+id: commerce_product.laptop.field_processor_brand
+field_name: field_processor_brand
+entity_type: commerce_product
+bundle: laptop
+label: processor_brand
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

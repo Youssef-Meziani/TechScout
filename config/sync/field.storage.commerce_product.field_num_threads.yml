@@ -1,0 +1,20 @@
+uuid: d24e2465-f9dc-46c9-b517-f3a38c4a630e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_num_threads
+field_name: field_num_threads
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
