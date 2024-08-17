@@ -130,3 +130,29 @@ cd TechScout
     ```bash
     lando drush cache:rebuild
     ```
+
+
+
+## 8. Importation et Gestion des Données Produit
+
+### Importer les Données Produit
+
+Si aucun produit n'est affiché dans la liste des produits dans la section commerce de Drupal, vous pouvez importer des données en utilisant :
+
+  ```bash
+  lando drush migrate-import laptop_import
+  ```
+
+### Gérer les Migrations
+
+Si vous devez annuler les modifications effectuées par la migration, vous pouvez utiliser les commandes suivantes :
+
+1. Réinitialiser le statut de la migration :
+  ```bash
+  lando drush migrate-reset-status laptop_import
+  ```
+
+2. Annuler la migration :
+  ```bash
+  lando drush migrate-rollback laptop_import
+  ```

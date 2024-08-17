@@ -4,7 +4,7 @@ migration_tags:
   - Commerce
 source:
   plugin: csv
-  path: 'public://laptops.csv'
+  path: 'laptops.csv'
   header_row_count: 1
   ids:
     - index
