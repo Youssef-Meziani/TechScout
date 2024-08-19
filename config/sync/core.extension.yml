@@ -35,6 +35,8 @@ module:
   inline_entity_form: 0
   language: 0
   laptop_import: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   locale: 0
   menu_link_content: 0

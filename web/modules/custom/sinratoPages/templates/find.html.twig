@@ -1,6 +1,8 @@
 <!-- shop page main wrapper start -->
 <div class="main-wrapper pt-35">
   <div class="container-fluid">
+    {% if data.laptops|length %}
+      <h2 class="pb-35">Search Results for "{{ data.search_query }}"</h2>
     <div class="row">
       <div class="col-lg-9">
         <div class="product-shop-main-wrapper mb-50">
@@ -51,1031 +53,116 @@
 
           </div>
           <div class="shop-product-wrap column_3 row">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="1" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-1.jpg" data-product-price="£30.31">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-1.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-2.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
+
+
+                  {% for laptop in data.laptops %}
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                      <div class="product-item mb-30" data-product-id="{{ laptop.id }}" data-product-name="{{ laptop.title }}" data-product-image="assets/img/product/product-1.jpg" data-product-price="£30.31">
+                        <div class="product-thumb">
+                          <a>
+                            <img src="{{ base_path ~ directory ~ '/assets/img/product/product 1.jpg' }}" class="pri-img" alt="">
+                            <img src="{{ base_path ~ directory ~ '/assets/img/product/product 2.jpg' }}" class="sec-img" alt="">
+                          </a>
+                          <div class="box-label">
+                            <div class="label-product label_new">
+                              <span>new</span>
+                            </div>
+                          </div>
+{#                          <div class="action-links">#}
+{#                            <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>#}
+{#                            <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>#}
+{#                            <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>#}
+{#                          </div>#}
+                        </div>
+                        <div class="product-caption">
+                          <div class="manufacture-product">
+                            <p><a href="#">{{ laptop.brand }}</a></p>
+                          </div>
+                          <div class="product-name">
+                            <h4><a href="#">{{ laptop.title }}</a></h4>
+                          </div>
+                          <div class="ratings">
+                            <span class="yellow"><i class="lnr lnr-star"></i></span>
+                            <span class="yellow"><i class="lnr lnr-star"></i></span>
+                            <span class="yellow"><i class="lnr lnr-star"></i></span>
+                            <span class="yellow"><i class="lnr lnr-star"></i></span>
+                            <span><i class="lnr lnr-star"></i></span>
+                          </div>
+                          <div class="price-box">
+                            <span class="regular-price">£30.31</span>
+                          </div>
+                          <button class="btn-cart compare-button" type="button">add to compare</button>
+                        </div>
+                      </div> <!-- end single grid item -->
+                      <div class="sinrato-list-item mb-30">
+                        <div class="sinrato-thumb">
+                          <a href="product-details.html">
+                            <img src="{{ base_path ~ directory ~ '/assets/img/product/product 1.jpg' }}" class="pri-img" alt="">
+                            <img src="{{ base_path ~ directory ~ '/assets/img/product/product 2.jpg' }}" class="sec-img" alt="">
+                          </a>
+                          <div class="box-label">
+                            <div class="label-product label_new">
+                              <span>new</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="sinrato-list-item-content">
+                          <div class="manufacture-product">
+                            <span><a href="#">{{ laptop.brand }}</a></span>
+                          </div>
+                          <div class="sinrato-product-name">
+                            <h4><a href="#">{{ laptop.title }}</a></h4>
+                          </div>
+                          <div class="sinrato-ratings mb-15">
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                            <span><i class="fa fa-star"></i></span>
+                          </div>
+                          <div class="sinrato-product-des">
+                            <p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate...</p>
+                          </div>
+                        </div>
+                        <div class="sinrato-box-action">
+                          <div class="price-box">
+{#                            <span class="regular-price"><span class="special-price">£50.00</span></span>#}
+{#                            <span class="old-price"><del>£60.00</del></span>#}
+                            <span class="regular-price">£30.31</span>
+                          </div>
+                          <button class="btn-cart" type="button">add to compare</button>
+{#                          <div class="action-links sinrat-list-icon">#}
+{#                            <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>#}
+{#                            <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>#}
+{#                            <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>#}
+{#                          </div>#}
+                        </div>
+                      </div> <!-- end single list item -->
                     </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price">£30.31</span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-12.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-9.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Beats EP Wired Headphone-Black</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate...</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="2" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-12.jpg" data-product-price="£50.00">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-4.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-11.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-3.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Koss KPH7 Portable Headphone</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge w..</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£60.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="3" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-2.jpg" data-product-price="£50.00">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-2.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-3.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-6.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Apple iPad with Retina Display</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate...</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£30.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="4" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-8.jpg" data-product-price="£30.31">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-8.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-10.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price">£30.31</span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-12.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-13.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Beats EP Wired Headphone-Black</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.1GB memory, larger hard drives The new MacBook now c..</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£12.00</span></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="5" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-11.jpg" data-product-price="£30.31">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-11.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-3.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price">£30.31</span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-1.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Beats EP Wired Headphone-Black</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate...</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="6" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-9.jpg" data-product-price="£50.00">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-9.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-8.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-3.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-1.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Koss KPH7 Portable Headphone</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge w..</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£60.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="7" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-12.jpg" data-product-price="£50.00">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-12.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-13.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-4.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Apple iPad with Retina Display</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate...</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£30.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="8" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-14.jpg" data-product-price="£30.31">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-14.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-13.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price">£30.31</span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-5.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Beats EP Wired Headphone-Black</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.1GB memory, larger hard drives The new MacBook now c..</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£12.00</span></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="9" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-12.jpg" data-product-price="£30.31">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-2.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-1.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price">£30.31</span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-12.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-9.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Beats EP Wired Headphone-Black</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate...</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-              <div class="product-item mb-30" data-product-id="10" data-product-name="jony XB10 Portable Wireless Speaker" data-product-image="assets/img/product/product-11.jpg" data-product-price="£50.00">
-                <div class="product-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-11.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-4.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                    <div class="label-product label_sale">
-                      <span>-10%</span>
-                    </div>
-                  </div>
-                  <div class="action-links">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare" class="compare-button"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-                <div class="product-caption">
-                  <div class="manufacture-product">
-                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>
-                  </div>
-                  <div class="product-name">
-                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>
-                  </div>
-                  <div class="ratings">
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span class="yellow"><i class="lnr lnr-star"></i></span>
-                    <span><i class="lnr lnr-star"></i></span>
-                  </div>
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£50.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                </div>
-              </div> <!-- end single grid item -->
-              <div class="sinrato-list-item mb-30">
-                <div class="sinrato-thumb">
-                  <a href="product-details.html">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="pri-img" alt="">
-                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-3.jpg' }}" class="sec-img" alt="">
-                  </a>
-                  <div class="box-label">
-                    <div class="label-product label_new">
-                      <span>new</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sinrato-list-item-content">
-                  <div class="manufacture-product">
-                    <span><a href="#">Canon</a></span>
-                  </div>
-                  <div class="sinrato-product-name">
-                    <h4><a href="product-details.html">Koss KPH7 Portable Headphone</a></h4>
-                  </div>
-                  <div class="sinrato-ratings mb-15">
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                    <span><i class="fa fa-star"></i></span>
-                  </div>
-                  <div class="sinrato-product-des">
-                    <p>Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge w..</p>
-                  </div>
-                </div>
-                <div class="sinrato-box-action">
-                  <div class="price-box">
-                    <span class="regular-price"><span class="special-price">£60.00</span></span>
-                    <span class="old-price"><del>£60.00</del></span>
-                  </div>
-                  <button class="btn-cart" type="button">add to cart</button>
-                  <div class="action-links sinrat-list-icon">
-                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>
-                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>
-                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>
-                  </div>
-                </div>
-              </div> <!-- end single list item -->
-            </div>
-{#            <div class="col-lg-3 col-md-4 col-sm-6">#}
-{#              <div class="product-item mb-30">#}
-{#                <div class="product-thumb">#}
-{#                  <a href="product-details.html">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-13.jpg' }}" class="pri-img" alt="">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="sec-img" alt="">#}
-{#                  </a>#}
-{#                  <div class="box-label">#}
-{#                    <div class="label-product label_sale">#}
-{#                      <span>-10%</span>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                  <div class="action-links">#}
-{#                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>#}
-{#                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>#}
-{#                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>#}
-{#                  </div>#}
-{#                </div>#}
-{#                <div class="product-caption">#}
-{#                  <div class="manufacture-product">#}
-{#                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>#}
-{#                  </div>#}
-{#                  <div class="product-name">#}
-{#                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>#}
-{#                  </div>#}
-{#                  <div class="ratings">#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span><i class="lnr lnr-star"></i></span>#}
-{#                  </div>#}
-{#                  <div class="price-box">#}
-{#                    <span class="regular-price"><span class="special-price">£50.00</span></span>#}
-{#                  </div>#}
-{#                  <button class="btn-cart" type="button">add to cart</button>#}
-{#                </div>#}
-{#              </div> <!-- end single grid item -->#}
-{#              <div class="sinrato-list-item mb-30">#}
-{#                <div class="sinrato-thumb">#}
-{#                  <a href="product-details.html">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-10.jpg' }}" class="pri-img" alt="">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-7.jpg' }}" class="sec-img" alt="">#}
-{#                  </a>#}
-{#                  <div class="box-label">#}
-{#                    <div class="label-product label_new">#}
-{#                      <span>new</span>#}
-{#                    </div>#}
-{#                    <div class="label-product label_sale">#}
-{#                      <span>-10%</span>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                </div>#}
-{#                <div class="sinrato-list-item-content">#}
-{#                  <div class="manufacture-product">#}
-{#                    <span><a href="#">Canon</a></span>#}
-{#                  </div>#}
-{#                  <div class="sinrato-product-name">#}
-{#                    <h4><a href="product-details.html">Apple iPad with Retina Display</a></h4>#}
-{#                  </div>#}
-{#                  <div class="sinrato-ratings mb-15">#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                  </div>#}
-{#                  <div class="sinrato-product-des">#}
-{#                    <p>Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate...</p>#}
-{#                  </div>#}
-{#                </div>#}
-{#                <div class="sinrato-box-action">#}
-{#                  <div class="price-box">#}
-{#                    <span class="regular-price"><span class="special-price">£30.00</span></span>#}
-{#                    <span class="old-price"><del>£60.00</del></span>#}
-{#                  </div>#}
-{#                  <button class="btn-cart" type="button">add to cart</button>#}
-{#                  <div class="action-links sinrat-list-icon">#}
-{#                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>#}
-{#                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>#}
-{#                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div> <!-- end single list item -->#}
-{#            </div>#}
-{#            <div class="col-lg-3 col-md-4 col-sm-6">#}
-{#              <div class="product-item mb-30">#}
-{#                <div class="product-thumb">#}
-{#                  <a href="product-details.html">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-10.jpg' }}" class="pri-img" alt="">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-8.jpg' }}" class="sec-img" alt="">#}
-{#                  </a>#}
-{#                  <div class="box-label">#}
-{#                    <div class="label-product label_new">#}
-{#                      <span>new</span>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                  <div class="action-links">#}
-{#                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>#}
-{#                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>#}
-{#                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>#}
-{#                  </div>#}
-{#                </div>#}
-{#                <div class="product-caption">#}
-{#                  <div class="manufacture-product">#}
-{#                    <p><a href="shop-grid-left-sidebar.html">apple</a></p>#}
-{#                  </div>#}
-{#                  <div class="product-name">#}
-{#                    <h4><a href="product-details.html">jony XB10 Portable  Wireless Speaker</a></h4>#}
-{#                  </div>#}
-{#                  <div class="ratings">#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span class="yellow"><i class="lnr lnr-star"></i></span>#}
-{#                    <span><i class="lnr lnr-star"></i></span>#}
-{#                  </div>#}
-{#                  <div class="price-box">#}
-{#                    <span class="regular-price">£30.31</span>#}
-{#                  </div>#}
-{#                  <button class="btn-cart" type="button">add to cart</button>#}
-{#                </div>#}
-{#              </div> <!-- end single grid item -->#}
-{#              <div class="sinrato-list-item mb-30">#}
-{#                <div class="sinrato-thumb">#}
-{#                  <a href="product-details.html">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-13.jpg' }}" class="pri-img" alt="">#}
-{#                    <img src="{{ base_path ~ directory ~ '/assets/img/product/product-12.jpg' }}" class="sec-img" alt="">#}
-{#                  </a>#}
-{#                  <div class="box-label">#}
-{#                    <div class="label-product label_sale">#}
-{#                      <span>-10%</span>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                </div>#}
-{#                <div class="sinrato-list-item-content">#}
-{#                  <div class="manufacture-product">#}
-{#                    <span><a href="#">Canon</a></span>#}
-{#                  </div>#}
-{#                  <div class="sinrato-product-name">#}
-{#                    <h4><a href="product-details.html">Beats EP Wired Headphone-Black</a></h4>#}
-{#                  </div>#}
-{#                  <div class="sinrato-ratings mb-15">#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                    <span><i class="fa fa-star"></i></span>#}
-{#                  </div>#}
-{#                  <div class="sinrato-product-des">#}
-{#                    <p>Intel Core 2 Duo processor Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.1GB memory, larger hard drives The new MacBook now c..</p>#}
-{#                  </div>#}
-{#                </div>#}
-{#                <div class="sinrato-box-action">#}
-{#                  <div class="price-box">#}
-{#                    <span class="regular-price"><span class="special-price">£12.00</span></span>#}
-{#                  </div>#}
-{#                  <button class="btn-cart" type="button">add to cart</button>#}
-{#                  <div class="action-links sinrat-list-icon">#}
-{#                    <a href="#" title="Wishlist"><i class="lnr lnr-heart"></i></a>#}
-{#                    <a href="#" title="Compare"><i class="lnr lnr-sync"></i></a>#}
-{#                    <a href="#" title="Quick view" data-bs-target="#quickk_view" data-bs-toggle="modal"><i class="lnr lnr-magnifier"></i></a>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div> <!-- end single list item -->#}
-{#            </div>#}
-          </div>
-          <div class="paginatoin-area style-2 pt-35 pb-20">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="pagination-area">
-                  <p>Showing 1 to 9 of 9 (1 Pages)</p>
-                </div>
+                  {% endfor %}
+        </div>
+        <div class="paginatoin-area style-2 pt-35 pb-20">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="pagination-area">
+                <p>Showing 1 to 9 of 9 (1 Pages)</p>
               </div>
-              <div class="col-sm-6">
-                <ul class="pagination-box pagination-style-2">
-                  <li><a class="Previous" href="#">Previous</a>
-                  </li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li>
-                    <a class="Next" href="#"> Next </a>
-                  </li>
-                </ul>
-              </div>
+            </div>
+            <div class="col-sm-6">
+              <ul class="pagination-box pagination-style-2">
+                <li><a class="Previous" href="#">Previous</a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li>
+                  <a class="Next" href="#"> Next </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
       </div>
       <div class="col-lg-3">
         <div class="shop-sidebar-inner mb-30">
@@ -1155,7 +242,11 @@
           </div>
         </div>
       </div>
-    </div>
+      </div>
+
+    {% else %}
+      <h2 class="text-center pb-35">No results found for "{{ data.search_query }}"</h2>
+    {% endif %}
   </div>
 </div>
 <!-- shop page main wrapper end -->

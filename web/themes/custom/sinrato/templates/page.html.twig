@@ -16,14 +16,14 @@
       <div class="row align-items-center">
         <div class="col-lg-3 col-md-4 col-sm-4 col-12">
           <div class="logo">
-            <a href="index.html"><img src="{{ base_path ~ directory ~ '/assets/img/logo/logo-sinrato.png' }}" alt="brand-logo"></a>
+            <a href="{{ path('sinratoPages_home') }}"><img src="{{ base_path ~ directory ~ '/assets/img/logo/logo-sinrato.png' }}" alt="brand-logo"></a>
           </div>
         </div>
         <div class="col-lg-5 col-md-12 col-12 order-sm-last">
           <div class="header-middle-inner">
-            <form action="https://htmldemo.net/sinrato/sinrato/method" class="search-form">
-              <input type="text" class="top-cat-field" placeholder="Search entire store here">
-              <input type="button" class="top-search-btn" value="Search">
+            <form action="{{ path('sinratoPages_find') }}" method="get" class="search-form">
+              <input type="text" class="top-cat-field" placeholder="Search laptop collection" name="search">
+              <input type="submit" class="top-search-btn" value="Search">
             </form>
           </div>
         </div>
@@ -31,7 +31,7 @@
           <div class="mini-cart-option">
             <ul>
               <li class="compare">
-                <a class="ha-toggle" href="{{ url('sinratoPages_compare') }}"><span class="lnr lnr-sync"></span><span class="count">0</span>Compare</a>
+                <a class="ha-toggle" href="{{ path('sinratoPages_compare') }}"><span class="lnr lnr-sync"></span><span class="count">0</span>Compare</a>
               </li>
             </ul>
           </div>
@@ -62,7 +62,7 @@
                     <div class="footer-single-widget">
                         <div class="widget-title">
                             <div class="footer-logo mb-30">
-                                <a href="index.html">
+                                <a href="{{ path('sinratoPages_home') }}">
                                     <img src="{{ directory }}/assets/img/logo/logo-sinrato.png" alt="">
                                 </a>
                             </div>
@@ -81,7 +81,7 @@
                         <div class="widget-body">
                             <div class="footer-useful-link">
                                 <ul>
-                                    <li><a href="about.html">about us</a></li>
+                                    <li><a href="#">about us</a></li>
                                     <li><a href="#">Delivery Information</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
                                     <li><a href="#">Terms & Conditions</a></li>
