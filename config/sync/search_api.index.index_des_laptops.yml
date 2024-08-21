@@ -1,0 +1,303 @@
+uuid: 01e6a726-4f5d-41c1-a58b-7401cebd3887
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.commerce_product.field_display_size
+    - field.storage.commerce_product.field_gpu_brand
+    - field.storage.commerce_product.field_gpu_type
+    - field.storage.commerce_product.field_is_touch_screen
+    - field.storage.commerce_product.field_marque
+    - field.storage.commerce_product.field_num_cores
+    - field.storage.commerce_product.field_num_threads
+    - field.storage.commerce_product.field_os
+    - field.storage.commerce_product.field_price
+    - field.storage.commerce_product.field_primary_storage_capacity
+    - field.storage.commerce_product.field_primary_storage_type
+    - field.storage.commerce_product.field_processor_brand
+    - field.storage.commerce_product.field_processor_tier
+    - field.storage.commerce_product.field_ram_memory
+    - field.storage.commerce_product.field_rating
+    - field.storage.commerce_product.field_resolution
+    - field.storage.commerce_product.field_secondary_storage_type
+    - field.storage.commerce_product.field_secondary_storage_capacity
+    - field.storage.commerce_product.field_warranty
+    - search_api.server.solr
+  module:
+    - search_api_solr
+    - commerce_product
+    - search_api
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        fr: '0'
+      use_universal_collation: false
+id: index_des_laptops
+name: 'Index des Laptops'
+description: ''
+read_only: false
+field_settings:
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    configuration:
+      type: union
+      fields:
+        - 'entity:commerce_product/field_brand'
+        - 'entity:commerce_product/field_display_size'
+        - 'entity:commerce_product/field_gpu_brand'
+        - 'entity:commerce_product/field_gpu_type'
+        - 'entity:commerce_product/field_is_touch_screen'
+        - 'entity:commerce_product/field_marque'
+        - 'entity:commerce_product/field_num_cores'
+        - 'entity:commerce_product/field_num_threads'
+        - 'entity:commerce_product/field_os'
+        - 'entity:commerce_product/field_price'
+        - 'entity:commerce_product/field_primary_storage_capacity'
+        - 'entity:commerce_product/field_primary_storage_type'
+        - 'entity:commerce_product/field_processor_brand'
+        - 'entity:commerce_product/field_processor_tier'
+        - 'entity:commerce_product/field_ram_memory'
+        - 'entity:commerce_product/field_rating'
+        - 'entity:commerce_product/field_resolution'
+        - 'entity:commerce_product/field_secondary_storage_capacity'
+        - 'entity:commerce_product/field_secondary_storage_type'
+        - 'entity:commerce_product/field_warranty'
+        - 'entity:commerce_product/title'
+  field_display_size:
+    label: 'display size'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_display_size
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_display_size
+  field_gpu_brand:
+    label: 'gpu brand'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_gpu_brand
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_gpu_brand
+  field_gpu_type:
+    label: 'gpu type'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_gpu_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_gpu_type
+  field_is_touch_screen:
+    label: 'is touch screen'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_is_touch_screen
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_is_touch_screen
+  field_marque:
+    label: marque
+    datasource_id: 'entity:commerce_product'
+    property_path: field_marque
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_marque
+  field_num_cores:
+    label: num_cores
+    datasource_id: 'entity:commerce_product'
+    property_path: field_num_cores
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_num_cores
+  field_num_threads:
+    label: num_threads
+    datasource_id: 'entity:commerce_product'
+    property_path: field_num_threads
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_num_threads
+  field_os:
+    label: os
+    datasource_id: 'entity:commerce_product'
+    property_path: field_os
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_os
+  field_price:
+    label: Price
+    datasource_id: 'entity:commerce_product'
+    property_path: field_price
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_price
+  field_primary_storage_capacity:
+    label: 'primary storage capacity'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_primary_storage_capacity
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_primary_storage_capacity
+  field_primary_storage_type:
+    label: 'primary storage type'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_primary_storage_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_primary_storage_type
+  field_processor_brand:
+    label: processor_brand
+    datasource_id: 'entity:commerce_product'
+    property_path: field_processor_brand
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_processor_brand
+  field_processor_tier:
+    label: processor_tier
+    datasource_id: 'entity:commerce_product'
+    property_path: field_processor_tier
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_processor_tier
+  field_ram_memory:
+    label: 'ram memory'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_ram_memory
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_ram_memory
+  field_rating:
+    label: rating
+    datasource_id: 'entity:commerce_product'
+    property_path: field_rating
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_rating
+  field_resolution:
+    label: resolution
+    datasource_id: 'entity:commerce_product'
+    property_path: field_resolution
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_resolution
+  field_secondary_storage_capacity:
+    label: secondary_storage_capacity
+    datasource_id: 'entity:commerce_product'
+    property_path: field_secondary_storage_capacity
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_secondary_storage_capacity
+  field_secondary_storage_type:
+    label: 'secondary storage type'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_secondary_storage_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_secondary_storage_type
+  field_warranty:
+    label: warranty
+    datasource_id: 'entity:commerce_product'
+    property_path: field_warranty
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_warranty
+  title:
+    label: Titre
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  type:
+    label: 'Product type'
+    datasource_id: 'entity:commerce_product'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: false
+      selected:
+        - laptop
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: solr

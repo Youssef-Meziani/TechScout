@@ -1,0 +1,22 @@
+uuid: 5af27e44-40d7-466f-a4ac-e73eb84cdcde
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kart
+_core:
+  default_config_hash: vK88Ik0dx1ZlqJUSOrj8c_VBXp6zs3ziIy9D62S0LCA
+id: kart_powered
+theme: kart
+region: hidden_blocks
+weight: -12
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

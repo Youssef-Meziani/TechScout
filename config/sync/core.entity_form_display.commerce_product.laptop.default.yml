@@ -7,19 +7,21 @@ dependencies:
     - field.field.commerce_product.laptop.body
     - field.field.commerce_product.laptop.field_brand
     - field.field.commerce_product.laptop.field_display_size
-    - field.field.commerce_product.laptop.field_field_resolution
     - field.field.commerce_product.laptop.field_gpu_brand
     - field.field.commerce_product.laptop.field_gpu_type
     - field.field.commerce_product.laptop.field_is_touch_screen
+    - field.field.commerce_product.laptop.field_marque
     - field.field.commerce_product.laptop.field_num_cores
     - field.field.commerce_product.laptop.field_num_threads
     - field.field.commerce_product.laptop.field_os
+    - field.field.commerce_product.laptop.field_price
     - field.field.commerce_product.laptop.field_primary_storage_capacity
     - field.field.commerce_product.laptop.field_primary_storage_type
     - field.field.commerce_product.laptop.field_processor_brand
     - field.field.commerce_product.laptop.field_processor_tier
     - field.field.commerce_product.laptop.field_ram_memory
     - field.field.commerce_product.laptop.field_rating
+    - field.field.commerce_product.laptop.field_resolution
     - field.field.commerce_product.laptop.field_secondary_storage_capacity
     - field.field.commerce_product.laptop.field_secondary_storage_type
     - field.field.commerce_product.laptop.field_warranty
@@ -49,10 +51,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_brand:
-    type: string_textfield
-    weight: 91
+    type: entity_reference_autocomplete
+    weight: 109
     region: content
     settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
@@ -61,14 +65,6 @@ content:
     weight: 104
     region: content
     settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_field_resolution:
-    type: string_textfield
-    weight: 105
-    region: content
-    settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_gpu_brand:
@@ -94,6 +90,14 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  field_marque:
+    type: string_textfield
+    weight: 111
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_num_cores:
     type: number
     weight: 94
@@ -114,6 +118,13 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_price:
+    type: number
+    weight: 113
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_primary_storage_capacity:
@@ -159,6 +170,14 @@ content:
     weight: 108
     region: content
     settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_resolution:
+    type: string_textfield
+    weight: 112
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_secondary_storage_capacity:

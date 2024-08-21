@@ -1,9 +1,10 @@
-uuid: 6f0ba2c4-cf3d-4144-a003-8c43bedfd88e
+uuid: 9df542b6-96fb-49af-b37f-58a1ef911703
 langcode: fr
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.laptop
+    - core.entity_view_mode.commerce_product.laptop_laptop_comparison
     - field.field.commerce_product.laptop.body
     - field.field.commerce_product.laptop.field_brand
     - field.field.commerce_product.laptop.field_display_size
@@ -25,10 +26,10 @@ dependencies:
     - field.field.commerce_product.laptop.field_secondary_storage_capacity
     - field.field.commerce_product.laptop.field_secondary_storage_type
     - field.field.commerce_product.laptop.field_warranty
-id: commerce_product.laptop.default
+id: commerce_product.laptop.laptop_laptop_comparison
 targetEntityType: commerce_product
 bundle: laptop
-mode: default
+mode: laptop_laptop_comparison
 content:
   field_display_size:
     type: number_decimal
@@ -39,7 +40,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_gpu_brand:
     type: string
@@ -99,7 +100,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 17
     region: content
   field_price:
     type: number_decimal
@@ -110,7 +111,7 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_primary_storage_capacity:
     type: number_integer
@@ -119,7 +120,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 11
+    weight: 9
     region: content
   field_primary_storage_type:
     type: string
@@ -135,7 +136,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 12
+    weight: 11
     region: content
   field_processor_tier:
     type: string
@@ -143,7 +144,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 13
+    weight: 12
     region: content
   field_ram_memory:
     type: number_integer
@@ -171,7 +172,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 14
+    weight: 16
     region: content
   field_secondary_storage_capacity:
     type: number_integer
@@ -180,7 +181,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 17
+    weight: 14
     region: content
   field_secondary_storage_type:
     type: string
@@ -188,7 +189,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 16
+    weight: 13
     region: content
   field_warranty:
     type: number_integer
