@@ -1,0 +1,24 @@
+uuid: 878871eb-f1ab-4018-811f-bb0d9bd150ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.merchant
+  module:
+    - text
+id: node.merchant.body
+field_name: body
+entity_type: node
+bundle: merchant
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,82 @@
+uuid: d3c7945a-c50e-47a5-997f-f518f99f7ae8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - entity_comparison.entity_comparison.compare_laptops
+    - field.field.node.merchant.body
+    - field.field.node.merchant.layout_builder__layout
+    - node.type.merchant
+    - views.view.solr_views
+  module:
+    - entity_comparison
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: chercher
+          context_mapping: {  }
+        components:
+          dd9e9665-0924-494a-8c91-93c9d34f5aa1:
+            uuid: dd9e9665-0924-494a-8c91-93c9d34f5aa1
+            region: content
+            configuration:
+              id: 'views_block:solr_views-block_1'
+              label: 'tapez ici pour rechercher votre ordinateur souhaitez vous le comparer'
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: 'tapez ici pour rechercher votre ordinateur souhaitez vous le comparer'
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: comparer
+          context_mapping: {  }
+        components:
+          c87770e7-732e-4f0c-b4d5-2b87246234b1:
+            uuid: c87770e7-732e-4f0c-b4d5-2b87246234b1
+            region: content
+            configuration:
+              id: 'entity_comparison_block:compare_laptops'
+              label: 'compare laptops'
+              label_display: visible
+              provider: entity_comparison
+              context_mapping: {  }
+              link_text: 'nombre des ordinateur sélectionner pour les comparer : @count items'
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.merchant.default
+targetEntityType: node
+bundle: merchant
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

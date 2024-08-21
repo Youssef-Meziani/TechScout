@@ -1,11 +1,11 @@
-uuid: 753c51fa-2e75-4dbd-80f9-7a734b84be47
+uuid: fcbd7642-b05b-451e-b3dc-7c485094cf1d
 langcode: fr
 status: true
 dependencies:
   module:
     - commerce_product
-id: commerce_product.field_field_resolution
-field_name: field_field_resolution
+id: commerce_product.field_resolution
+field_name: field_resolution
 entity_type: commerce_product
 type: string
 settings:

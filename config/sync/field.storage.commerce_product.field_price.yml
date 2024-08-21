@@ -1,16 +1,16 @@
-uuid: 5be06204-be8a-4bfe-843d-728474f59c9c
+uuid: 0e1f616c-5663-44b3-9a0c-c889a93e1dc3
 langcode: fr
 status: true
 dependencies:
   module:
     - commerce_product
-    - taxonomy
-id: commerce_product.field_brand
-field_name: field_brand
+id: commerce_product.field_price
+field_name: field_price
 entity_type: commerce_product
-type: entity_reference
+type: decimal
 settings:
-  target_type: taxonomy_term
+  precision: 10
+  scale: 2
 module: core
 locked: false
 cardinality: 1

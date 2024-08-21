@@ -25,6 +25,7 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity: 0
+  entity_comparison: 0
   feeds: 0
   field: 0
   field_ui: 0
@@ -36,6 +37,8 @@ module:
   inline_entity_form: 0
   language: 0
   laptop_import: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   locale: 0
   menu_link_content: 0
@@ -59,7 +62,6 @@ module:
   search_api: 0
   search_api_solr: 0
   shortcut: 0
-  sinratoPages: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -75,4 +77,6 @@ theme:
   olivero: 0
   claro: 0
   sinrato: 0
+  stable9: 0
+  kart: 0
 profile: standard

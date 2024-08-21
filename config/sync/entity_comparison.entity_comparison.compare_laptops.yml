@@ -1,0 +1,14 @@
+uuid: 7f39e3d8-4b6b-4e00-a957-6659434f4c69
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.commerce_product.laptop.laptop_compare_laptops
+    - core.entity_view_mode.commerce_product.laptop_compare_laptops
+id: compare_laptops
+label: 'compare laptops'
+add_link_text: 'Add to comparison list'
+remove_link_text: 'Remove from the comparison'
+limit: 4
+entity_type: commerce_product
+bundle_type: laptop
