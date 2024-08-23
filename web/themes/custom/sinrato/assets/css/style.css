@@ -2569,7 +2569,8 @@ a.shop-btn:hover {
     display: inline-block;
 }
 
-.pagination-box li a {
+.pagination-box li a,
+.pagination-box li:not(:has(a)) {
     color: #111;
     padding: 10px;
 }
@@ -2578,7 +2579,7 @@ a.shop-btn:hover {
     color: #ff8b00;
 }
 
-.pagination-box li.active a {
+.pagination-box li.active {
     color: #ff8b00;
 }
 
@@ -3030,7 +3031,11 @@ a.shop-btn:hover {
     border: medium none;
     font-size: 14px;
     font-weight: 400;
-    width: 55px;
+    width: 100%;
+}
+
+.filter-price-cont .input-type:last-child input {
+  text-align: right;
 }
 
 /* ---price filter css end--- */

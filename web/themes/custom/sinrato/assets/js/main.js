@@ -729,12 +729,12 @@
 			max: 500,
 			values: [ 0, 500 ],
 			slide: function( event, ui ) {
-			 $( "#min-price" ).val('$' + ui.values[ 0 ] );
-			 $( "#max-price" ).val('$' + ui.values[ 1 ] );
+			 $( "#min-price" ).val(ui.values[ 0 ] + ' MAD' );
+			 $( "#max-price" ).val(ui.values[ 1 ] + ' MAD' );
 			  }
 		});
-		   $( "#min-price" ).val('$' + $( "#price-slider" ).slider( "values", 0 ));
-		   $( "#max-price" ).val('$' + $( "#price-slider" ).slider( "values", 1 ));
+		   $( "#min-price" ).val($( "#price-slider" ).slider( "values", 0 ) + ' MAD');
+		   $( "#max-price" ).val($( "#price-slider" ).slider( "values", 1 ) + ' MAD');
 
 		// magnificPopup img view
 		$('.img-popup').magnificPopup({
