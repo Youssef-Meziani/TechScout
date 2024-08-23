@@ -14,6 +14,7 @@ dependencies:
     - field.field.commerce_product.laptop.field_num_cores
     - field.field.commerce_product.laptop.field_num_threads
     - field.field.commerce_product.laptop.field_os
+    - field.field.commerce_product.laptop.field_price
     - field.field.commerce_product.laptop.field_primary_storage_capacity
     - field.field.commerce_product.laptop.field_primary_storage_type
     - field.field.commerce_product.laptop.field_processor_brand
@@ -114,6 +115,13 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_price:
+    type: number
+    weight: 109
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_primary_storage_capacity:

@@ -88,11 +88,10 @@ process:
   field_os: OS
   field_warranty: year_of_warranty
   field_rating: Rating
-  variations/0/sku: index
-  variations/0/price/number: Price
-  variations/0/price/currency_code:
-    plugin: default_value
-    default_value: 'MAD'
+  field_price:
+    plugin: callback
+    callable: 'floatval'
+    source: Price
 destination:
   plugin: 'entity:commerce_product'
   default_bundle: 'laptops'

@@ -6,6 +6,23 @@
   background-color: #f0f0f0;
 }
 
+.remove-from-compare {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-from-compare:hover {
+  background-color: #c82333;
+}
+
+.remove-from-compare .lnr {
+  font-size: 16px;
+}
 
 /*-----------------------------------------------------------------------------------
 

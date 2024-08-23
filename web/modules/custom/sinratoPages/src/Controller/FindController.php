@@ -60,7 +60,8 @@ class FindController extends ControllerBase {
           'id' => $entity->id(),
           'title' => $entity->get('title')->value,
           'brand' => $entity->get('field_brand')->value,
-          // Add more fields as needed
+          'rating' => $entity->get('field_rating')->value,
+          'price' => $entity->get('field_price')->value,
         ];
       }
     }
