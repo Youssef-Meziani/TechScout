@@ -35,6 +35,7 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  jsonapi: 0
   language: 0
   laptop_import: 0
   layout_builder: 0
@@ -60,6 +61,7 @@ module:
   purge_ui: 0
   search_api: 0
   search_api_solr: 0
+  serialization: 0
   shortcut: 0
   system: 0
   taxonomy: 0
