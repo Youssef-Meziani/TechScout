@@ -92,6 +92,7 @@ field_settings:
         - 'entity:commerce_product/field_gpu_type'
         - 'entity:commerce_product/field_is_touch_screen'
         - 'entity:commerce_product/field_marque'
+        - 'entity:commerce_product/field_merchant'
         - 'entity:commerce_product/field_num_cores'
         - 'entity:commerce_product/field_num_threads'
         - 'entity:commerce_product/field_os'

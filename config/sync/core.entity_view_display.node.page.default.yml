@@ -5,9 +5,59 @@ dependencies:
   config:
     - field.field.node.page.body
     - node.type.page
+    - views.view.marques_de_laptops
+    - views.view.solr_views
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Recherche
+          context_mapping: {  }
+        components:
+          4e6e89b2-8c23-478c-8ff0-d0ae86364578:
+            uuid: 4e6e89b2-8c23-478c-8ff0-d0ae86364578
+            region: content
+            configuration:
+              id: 'views_block:solr_views-block_1'
+              label: "Rechercher l'ordinateur que vous voulez comparer"
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: "Rechercher l'ordinateur que vous voulez comparer"
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Liste des marques'
+          context_mapping: {  }
+        components:
+          d18f9062-269e-486f-937b-eaff24759c62:
+            uuid: d18f9062-269e-486f-937b-eaff24759c62
+            region: content
+            configuration:
+              id: 'views_block:marques_de_laptops-block_1'
+              label: 'Les marques disponible'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Les marques disponible'
+              items_per_page: '48'
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -23,6 +73,8 @@ content:
     weight: 100
     region: content
   links:
+    settings: {  }
+    third_party_settings: {  }
     weight: 101
     region: content
 hidden:

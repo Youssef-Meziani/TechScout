@@ -53,6 +53,8 @@ source:
       OS: 'Système d''exploitation'
     21:
       year_of_warranty: 'Années de garantie'
+    22:
+      merchant: 'Marchand'
 process:
   type:
     plugin: default_value
@@ -93,6 +95,13 @@ process:
     plugin: callback
     callable: 'floatval'
     source: Price
+  field_merchant:
+    plugin: entity_lookup
+    source: merchant
+    value_key: title
+    entity_type: node
+    bundle_key: type
+    bundle: merchant
 destination:
   plugin: 'entity:commerce_product'
   default_bundle: 'laptops'

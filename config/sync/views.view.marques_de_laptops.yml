@@ -1,18 +1,18 @@
-uuid: 42e8298f-8a88-480b-b730-4fbe719431fc
+uuid: 2242921b-d36c-4033-85cd-29d15e3b9cf5
 langcode: fr
 status: true
 dependencies:
   config:
-    - search_api.index.index_des_laptops
+    - field.storage.commerce_product.field_marque
   module:
-    - search_api
-id: solr_views
-label: 'solr views'
+    - commerce_product
+id: marques_de_laptops
+label: 'Marques de Laptops'
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_index_des_laptops
-base_field: search_api_id
+base_table: commerce_product_field_data
+base_field: product_id
 display:
   default:
     id: default
@@ -20,23 +20,23 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'solr views'
+      title: 'Marques de Laptops'
       fields:
-        title:
-          id: title
-          table: search_api_index_index_des_laptops
-          field: title
+        field_marque:
+          id: field_marque
+          table: commerce_product__field_marque
+          field: field_marque
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: search_api_field
+          plugin_id: field
           label: ''
           exclude: false
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: 'laptops/{{ field_marque }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -68,13 +68,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -85,13 +85,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
       pager:
         type: mini
         options:
@@ -104,12 +97,12 @@ display:
             next: ››
             previous: ‹‹
           expose:
-            items_per_page: false
+            items_per_page: true
             items_per_page_label: 'Éléments par page'
             items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
+            items_per_page_options_all: true
             items_per_page_options_all_label: '- Tout -'
-            offset: false
+            offset: true
             offset_label: Décalage
       exposed_form:
         type: basic
@@ -125,106 +118,59 @@ display:
         type: none
         options: {  }
       cache:
-        type: search_api_none
+        type: tag
         options: {  }
-      empty:
-        area:
-          id: area
-          table: views
-          field: area
+      empty: {  }
+      sorts:
+        field_marque_value:
+          id: field_marque_value
+          table: commerce_product__field_marque
+          field: field_marque_value
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: text
-          empty: true
-          content:
-            value: 'Veuillez entrer une marque valide pour afficher les résultats.'
-            format: basic_html
-          tokenize: false
-      sorts: {  }
-      arguments: {  }
-      filters:
-        aggregated_field:
-          id: aggregated_field
-          table: search_api_index_index_des_laptops
-          field: aggregated_field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_text
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
+          plugin_id: standard
+          order: ASC
           expose:
-            operator_id: aggregated_field_op
-            label: 'Tapez ici'
-            description: ''
-            use_operator: false
-            operator: aggregated_field_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: aggregated_field
-            required: false
-            remember: true
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: 'marque ici'
-          is_grouped: false
-          group_info:
-            label: 'Aggregated field'
-            description: null
-            identifier: aggregated_field
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters: {  }
       filter_groups:
         operator: AND
-        groups:
-          1: AND
+        groups: {  }
       style:
-        type: default
+        type: grid_responsive
+        options:
+          grouping: {  }
+          columns: 4
+          cell_min_width: 100
+          grid_gutter: 10
+          alignment: horizontal
       row:
         type: fields
       query:
-        type: search_api_query
+        type: views_query
         options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
           query_tags: {  }
       relationships: {  }
-      use_ajax: true
+      group_by: true
       header: {  }
       footer: {  }
-      hide_attachment_summary: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
       tags:
-        - 'config:search_api.index.index_des_laptops'
-        - 'search_api_list:index_des_laptops'
+        - 'config:field.storage.commerce_product.field_marque'
   block_1:
     id: block_1
     display_title: Block
@@ -244,10 +190,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
       tags:
-        - 'config:search_api.index.index_des_laptops'
-        - 'search_api_list:index_des_laptops'
+        - 'config:field.storage.commerce_product.field_marque'
   page_1:
     id: page_1
     display_title: Page
@@ -255,14 +199,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: laptops
+      path: marques-laptops
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
       tags:
-        - 'config:search_api.index.index_des_laptops'
-        - 'search_api_list:index_des_laptops'
+        - 'config:field.storage.commerce_product.field_marque'

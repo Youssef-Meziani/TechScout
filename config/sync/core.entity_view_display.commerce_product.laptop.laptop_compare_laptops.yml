@@ -12,6 +12,7 @@ dependencies:
     - field.field.commerce_product.laptop.field_gpu_type
     - field.field.commerce_product.laptop.field_is_touch_screen
     - field.field.commerce_product.laptop.field_marque
+    - field.field.commerce_product.laptop.field_merchant
     - field.field.commerce_product.laptop.field_num_cores
     - field.field.commerce_product.laptop.field_num_threads
     - field.field.commerce_product.laptop.field_os
@@ -29,6 +30,7 @@ dependencies:
   module:
     - entity_comparison
     - layout_builder
+    - layout_discovery
 third_party_settings:
   layout_builder:
     enabled: true
@@ -587,6 +589,7 @@ hidden:
   body: true
   created: true
   field_brand: true
+  field_merchant: true
   langcode: true
   search_api_excerpt: true
   stores: true
