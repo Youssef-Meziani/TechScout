@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: V4FT49MB2Sfaw50jWArAMjVPNb3bDhrqQK5TVZ0LYRg
+sinratoPages_home:
+  path: /home
+  defaults:
+    _controller: '\Drupal\sinratoPages\Controller\HomeController::index'
+    _title: Home
+  requirements:
+    _permission: 'access content'

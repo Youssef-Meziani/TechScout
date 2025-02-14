@@ -1,5 +1,5 @@
 uuid: 6d05ef69-22c6-4cb4-9383-c79ad23e06f1
-langcode: en
+langcode: fr
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: C00dyL_W_5M0nFlgUB3lWUTUs96jn51Jw1MLHVEHZD0
 id: comment_publish_action
-label: 'Publish comment'
+label: 'Publier un commentaire'
 type: comment
 plugin: 'entity:publish_action:comment'
 configuration: {  }

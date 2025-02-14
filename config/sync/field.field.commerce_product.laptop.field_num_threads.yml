@@ -1,0 +1,23 @@
+uuid: cfb0631a-fe60-4f3b-b5f4-ba9463e89e1b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+    - field.storage.commerce_product.field_num_threads
+id: commerce_product.laptop.field_num_threads
+field_name: field_num_threads
+entity_type: commerce_product
+bundle: laptop
+label: num_threads
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

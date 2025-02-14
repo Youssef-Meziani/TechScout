@@ -2,6 +2,8 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   address: 0
+  admin_toolbar: 0
+  admin_toolbar_tools: 0
   announcements_feed: 0
   automated_cron: 0
   big_pipe: 0
@@ -11,6 +13,7 @@ module:
   ckeditor5: 0
   comment: 0
   commerce: 0
+  commerce_feeds: 0
   commerce_price: 0
   commerce_product: 0
   commerce_store: 0
@@ -22,6 +25,8 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity: 0
+  entity_comparison: 0
+  feeds: 0
   field: 0
   field_ui: 0
   file: 0
@@ -30,16 +35,33 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  jsonapi: 0
+  language: 0
+  laptop_import: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
+  locale: 0
   menu_link_content: 0
   menu_ui: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migrate_tools: 0
   mysql: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
-  search: 0
+  phpass: 0
+  purge: 0
+  purge_tokens: 0
+  purge_ui: 0
+  search_api: 0
+  search_api_solr: 0
+  serialization: 0
   shortcut: 0
   system: 0
   taxonomy: 0
@@ -47,10 +69,15 @@ module:
   token: 0
   toolbar: 0
   user: 0
+  varnish_purger: 0
   views_ui: 0
+  content_translation: 10
   views: 10
   standard: 1000
 theme:
   olivero: 0
   claro: 0
+  sinrato: 0
+  stable9: 0
+  kart: 0
 profile: standard

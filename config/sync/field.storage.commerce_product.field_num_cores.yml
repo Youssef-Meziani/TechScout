@@ -1,0 +1,20 @@
+uuid: 61169a72-f721-4a02-847a-96f9823cae2c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_num_cores
+field_name: field_num_cores
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

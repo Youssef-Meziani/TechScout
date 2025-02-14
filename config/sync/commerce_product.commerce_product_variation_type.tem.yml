@@ -1,0 +1,10 @@
+uuid: 3e64f894-72f6-4f20-b952-36a0b25cbd79
+langcode: fr
+status: true
+dependencies: {  }
+id: tem
+label: temp
+traits: {  }
+locked: false
+orderItemType: null
+generateTitle: null

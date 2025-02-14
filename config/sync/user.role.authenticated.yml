@@ -1,5 +1,5 @@
 uuid: 71cb8208-bd34-47a2-ae2b-2815c536efda
-langcode: en
+langcode: fr
 status: true
 dependencies:
   config:
@@ -10,13 +10,12 @@ dependencies:
     - contact
     - file
     - filter
-    - search
     - shortcut
     - system
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
-label: 'Authenticated user'
+label: 'Utilisateur authentifié'
 weight: 1
 is_admin: false
 permissions:
@@ -26,7 +25,6 @@ permissions:
   - 'access site-wide contact form'
   - 'delete own files'
   - 'post comments'
-  - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view commerce_product'

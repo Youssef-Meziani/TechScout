@@ -1,0 +1,21 @@
+uuid: 9e5baada-6dc2-48d8-aa38-1a806b714fdf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+    - field.storage.commerce_product.field_is_touch_screen
+id: commerce_product.laptop.field_is_touch_screen
+field_name: field_is_touch_screen
+entity_type: commerce_product
+bundle: laptop
+label: 'is touch screen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,5 +1,5 @@
 uuid: 32f8039d-f7b5-4e81-88dd-c477154dce39
-langcode: en
+langcode: fr
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: commerce_product.default.body
 field_name: body
 entity_type: commerce_product
 bundle: default
-label: Body
+label: Corps
 description: ''
 required: false
 translatable: true

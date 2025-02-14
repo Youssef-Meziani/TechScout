@@ -1,0 +1,20 @@
+uuid: f8a9342b-ff5e-4954-a7a9-548495d56e13
+langcode: fr
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_ram_memory
+field_name: field_ram_memory
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

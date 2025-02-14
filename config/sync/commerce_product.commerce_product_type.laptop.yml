@@ -1,0 +1,14 @@
+uuid: d8f26238-6ab9-4e80-833a-1a9002e2e139
+langcode: fr
+status: true
+dependencies: {  }
+id: laptop
+label: laptop
+traits: {  }
+locked: false
+description: ''
+variationType: laptop
+variationTypes:
+  - laptop
+multipleVariations: true
+injectVariationFields: true

@@ -1,13 +1,13 @@
 uuid: 75ec5e2c-0a95-4ecd-8100-d6050bdc1668
-langcode: en
+langcode: fr
 status: true
 dependencies: {  }
 _core:
   default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
 id: personal
-label: 'Personal contact form'
+label: 'Formulaire de contact personnel'
 recipients: {  }
 reply: ''
 weight: 0
-message: 'Your message has been sent.'
+message: 'Votre message a été envoyé.'
 redirect: ''

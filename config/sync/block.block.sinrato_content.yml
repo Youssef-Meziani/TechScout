@@ -1,0 +1,22 @@
+uuid: b0dd0c29-035b-4530-ada0-c18bf2cd4e61
+langcode: fr
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - sinrato
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: sinrato_content
+theme: sinrato
+region: header
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: '0'
+  provider: system
+visibility: {  }

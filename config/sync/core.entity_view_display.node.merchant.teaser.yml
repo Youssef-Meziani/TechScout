@@ -1,0 +1,34 @@
+uuid: fbb2ba68-63e5-45ce-b227-9966700f73e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.merchant.body
+    - field.field.node.merchant.layout_builder__layout
+    - node.type.merchant
+  module:
+    - text
+    - user
+id: node.merchant.teaser
+targetEntityType: node
+bundle: merchant
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

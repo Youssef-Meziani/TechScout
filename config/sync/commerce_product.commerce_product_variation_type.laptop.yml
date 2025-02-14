@@ -1,0 +1,10 @@
+uuid: 7c216952-59db-4292-be9a-8e6ad260f5e9
+langcode: fr
+status: true
+dependencies: {  }
+id: laptop
+label: laptop
+traits: {  }
+locked: false
+orderItemType: null
+generateTitle: null

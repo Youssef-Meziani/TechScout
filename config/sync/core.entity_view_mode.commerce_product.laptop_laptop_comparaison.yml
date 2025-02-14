@@ -1,0 +1,11 @@
+uuid: 3b7c3d4b-e5da-4c1a-ad39-731ecf421909
+langcode: fr
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.laptop_laptop_comparaison
+label: 'Laptop comparaison'
+description: ''
+targetEntityType: commerce_product
+cache: true

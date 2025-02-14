@@ -1,0 +1,22 @@
+uuid: 8b9d3092-cd5f-4d10-85c5-d9aeadcdeb8b
+langcode: fr
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - sinrato
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: sinrato_breadcrumbs
+theme: sinrato
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: "Fils d'ariane"
+  label_display: '0'
+  provider: system
+visibility: {  }

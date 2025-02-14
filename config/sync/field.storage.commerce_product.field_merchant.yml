@@ -1,0 +1,20 @@
+uuid: 5c1fbaa7-3674-4e6a-854d-49f7d8b287c1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: commerce_product.field_merchant
+field_name: field_merchant
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

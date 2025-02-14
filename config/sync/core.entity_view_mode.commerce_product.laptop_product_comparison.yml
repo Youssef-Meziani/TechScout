@@ -1,0 +1,11 @@
+uuid: 30e3d3a4-c91f-49fe-9ec8-3fc31660c287
+langcode: fr
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.laptop_product_comparison
+label: 'Product comparison'
+description: ''
+targetEntityType: commerce_product
+cache: true

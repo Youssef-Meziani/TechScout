@@ -1,0 +1,10 @@
+uuid: 7b7642aa-9d65-4ca9-a14b-05727d666b4d
+langcode: fr
+status: true
+dependencies: {  }
+id: ordinateur_portable
+label: 'ordinateur portable'
+traits: {  }
+locked: false
+orderItemType: null
+generateTitle: null

@@ -1,0 +1,19 @@
+uuid: c697b553-d018-4b1d-a1cb-5ff8e45b6653
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+    - field.storage.commerce_product.field_gpu_brand
+id: commerce_product.laptop.field_gpu_brand
+field_name: field_gpu_brand
+entity_type: commerce_product
+bundle: laptop
+label: 'gpu brand'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

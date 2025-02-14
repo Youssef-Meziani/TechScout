@@ -1,0 +1,20 @@
+uuid: 3542247e-b07a-4d9f-bb32-40afd3844f3f
+langcode: fr
+status: false
+dependencies:
+  theme:
+    - sinrato
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: sinrato_page_title
+theme: sinrato
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de la page'
+  label_display: '0'
+  provider: core
+visibility: {  }

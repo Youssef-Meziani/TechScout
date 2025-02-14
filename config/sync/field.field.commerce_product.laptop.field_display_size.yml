@@ -1,0 +1,23 @@
+uuid: 09c59061-39ab-4759-a10c-52464a267423
+langcode: fr
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.laptop
+    - field.storage.commerce_product.field_display_size
+id: commerce_product.laptop.field_display_size
+field_name: field_display_size
+entity_type: commerce_product
+bundle: laptop
+label: 'display size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal
